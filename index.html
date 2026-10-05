@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wycliff Onsare | Official Profile</title>
+<meta name="description" content="Official personal website of Wycliff Onsare. Discover my biography, education, hobbies and social-media accounts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:#111827;
+  --muted:#667085;
+  --cream:#fffaf0;
+  --gold:#d4a72c;
+  --gold2:#f4d06f;
+  --navy:#101a36;
+  --blue:#2563eb;
+  --white:#ffffff;
+  --shadow:0 20px 60px rgba(16,24,40,.15);
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'DM Sans',sans-serif;
+  color:var(--ink);
+  background:linear-gradient(180deg,#f8fafc 0%,#fff 55%,#fff8e7 100%);
+  line-height:1.7;
+}
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:50;
+  background:rgba(16,26,54,.86); backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.nav-inner { max-width:1100px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:14px 22px; }
+.brand { color:#fff; font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:800; text-decoration:none; }
+.nav-links { display:flex; gap:22px; list-style:none; }
+.nav-links a { color:#eef2ff; text-decoration:none; font-weight:600; font-size:.92rem; }
+.nav-links a:hover { color:var(--gold2); }
+.hero {
+  min-height:92vh; padding:130px 22px 80px; display:flex; align-items:center;
+  position:relative; overflow:hidden;
+  background:
+    linear-gradient(120deg,rgba(8,15,38,.92),rgba(17,31,72,.76)),
+    url('wycliff-onsare-logo.png') center/cover no-repeat;
+}
+.hero::before {
+  content:""; position:absolute; width:420px; height:420px; border-radius:50%;
+  background:rgba(244,208,111,.17); filter:blur(8px); right:-120px; top:70px;
+}
+.hero-inner { max-width:1100px; width:100%; margin:auto; position:relative; z-index:2; display:grid; grid-template-columns:1.15fr .85fr; gap:55px; align-items:center; }
+.kicker { color:var(--gold2); text-transform:uppercase; letter-spacing:4px; font-weight:700; font-size:.8rem; margin-bottom:14px; }
+.hero h1 { color:#fff; font-family:'Playfair Display',serif; font-size:clamp(3.2rem,8vw,6.5rem); line-height:.98; margin-bottom:20px; }
+.hero h1 span { color:var(--gold2); }
+.hero p { color:#dbe4ff; font-size:1.08rem; max-width:640px; }
+.hero-actions { display:flex; flex-wrap:wrap; gap:13px; margin-top:30px; }
+.btn { display:inline-flex; align-items:center; justify-content:center; padding:13px 20px; border-radius:999px; text-decoration:none; font-weight:700; transition:.25s; }
+.btn:hover { transform:translateY(-3px); box-shadow:0 12px 25px rgba(0,0,0,.18); }
+.btn-gold { background:var(--gold2); color:#17120a; }
+.btn-outline { border:1px solid rgba(255,255,255,.35); color:#fff; background:rgba(255,255,255,.08); }
+.logo-wrap { display:flex; justify-content:center; }
+.logo {
+  width:min(360px,80vw); aspect-ratio:1; object-fit:cover; border-radius:34px;
+  border:8px solid rgba(255,255,255,.9); box-shadow:0 30px 80px rgba(0,0,0,.4);
+  transform:rotate(2deg);
+}
+.section { padding:90px 22px; }
+.container { max-width:1100px; margin:auto; }
+.section-heading { text-align:center; margin-bottom:45px; }
+.section-heading .eyebrow { color:#a27b10; text-transform:uppercase; letter-spacing:3px; font-weight:800; font-size:.78rem; }
+.section-heading h2 { font-family:'Playfair Display',serif; font-size:clamp(2.1rem,5vw,3.5rem); color:var(--navy); margin-top:8px; }
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:25px; }
+.card {
+  background:rgba(255,255,255,.9); border:1px solid rgba(16,24,40,.08);
+  border-radius:24px; padding:30px; box-shadow:var(--shadow);
+}
+.card h3 { font-family:'Playfair Display',serif; font-size:1.55rem; color:var(--navy); margin-bottom:12px; }
+.card p { color:var(--muted); }
+.info-list { display:grid; gap:13px; margin-top:15px; }
+.info-item { padding:14px 16px; border-radius:15px; background:#f7f8fc; }
+.info-item strong { color:var(--navy); }
+.tiles { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.tile { border-radius:24px; padding:28px; color:#fff; min-height:190px; display:flex; flex-direction:column; justify-content:flex-end; box-shadow:var(--shadow); }
+.tile:nth-child(1) { background:linear-gradient(135deg,#172554,#2563eb); }
+.tile:nth-child(2) { background:linear-gradient(135deg,#7c2d12,#ea580c); }
+.tile:nth-child(3) { background:linear-gradient(135deg,#14532d,#16a34a); }
+.tile h3 { font-family:'Playfair Display',serif; font-size:1.6rem; }
+.tile p { opacity:.9; }
+.social-panel {
+  background:linear-gradient(135deg,#111a38,#23396e); color:#fff; border-radius:30px;
+  padding:45px; text-align:center; box-shadow:var(--shadow);
+}
+.social-panel h2 { font-family:'Playfair Display',serif; font-size:2.6rem; margin-bottom:10px; }
+.social-panel p { color:#dbe4ff; }
+.social-buttons { display:flex; flex-wrap:wrap; justify-content:center; gap:13px; margin-top:25px; }
+.social-button { display:inline-flex; align-items:center; gap:8px; padding:14px 20px; border-radius:999px; color:#fff; text-decoration:none; font-weight:800; transition:.25s; }
+.social-button:hover { transform:translateY(-3px); }
+.call { background:#16a34a; }
+.facebook { background:#1877f2; }
+.instagram { background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045); }
+.tiktok { background:#050505; }
+.whatsapp { background:#25D366; }
+footer { background:#0b1124; color:#aeb9d5; text-align:center; padding:35px 20px; }
+footer strong { color:#fff; }
+@media(max-width:800px) {
+  .hero-inner,.about-grid { grid-template-columns:1fr; }
+  .hero { min-height:auto; }
+  .logo-wrap { order:-1; }
+  .logo { width:260px; }
+  .tiles { grid-template-columns:1fr; }
+  .nav-links { display:none; }
+  .hero h1 { font-size:3.6rem; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#home">Wycliff Onsare</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#contact">Connect</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-inner">
+    <div>
+      <div class="kicker">Official Personal Website</div>
+      <h1>Wycliff <span>Onsare</span></h1>
+      <p>Welcome to my personal space — discover my story, education, interests and the easiest ways to connect with me.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#about">Explore My Profile</a>
+        <a class="btn btn-outline" href="tel:0708463189">📞 Call Me</a>
+      </div>
+    </div>
+    <div class="logo-wrap">
+      <img class="logo" src="wycliff-onsare-logo.png" alt="Wycliff Onsare logo">
+    </div>
+  </div>
+</header>
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">A little about me</div>
+      <h2>My Story</h2>
+    </div>
+    <div class="about-grid">
+      <div class="card">
+        <h3>Who I Am</h3>
+        <p>My name is Wycliff Onsare Onserio. I was born in Kisii. I enjoy watching, swimming and reading books, and I speak English, Kiswahili and Kisii.</p>
+      </div>
+      <div class="card">
+        <h3>Languages</h3>
+        <div class="info-list">
+          <div class="info-item"><strong>English</strong></div>
+          <div class="info-item"><strong>Kiswahili</strong></div>
+          <div class="info-item"><strong>Kisii</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="education">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">My journey</div>
+      <h2>Education</h2>
+    </div>
+    <div class="tiles">
+      <div class="tile"><h3>St James Leberio</h3><p>Primary School</p></div>
+      <div class="tile"><h3>Mbale High School</h3><p>Secondary Education</p></div>
+      <div class="tile"><h3>Kisii University</h3><p>Higher Education</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="hobbies">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">What I enjoy</div>
+      <h2>My Hobbies</h2>
+    </div>
+    <div class="about-grid">
+      <div class="card"><h3>🎬 Watching</h3><p>I enjoy watching during my free time.</p></div>
+      <div class="card"><h3>🏊 Swimming</h3><p>Swimming is one of my favourite activities.</p></div>
+      <div class="card"><h3>📚 Reading</h3><p>I enjoy reading books and learning new things.</p></div>
+      <div class="card"><h3>🌍 Interests</h3><p>Exploring ideas, connecting with people and continuing to learn.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <div class="social-panel">
+      <div class="eyebrow">Stay connected</div>
+      <h2>Connect With Me</h2>
+      <p>Use the buttons below to contact me or visit my social-media accounts directly.</p>
+      <div class="social-buttons">
+        <a class="social-button call" href="tel:0708463189">📞 Call Me</a>
+        <a class="social-button whatsapp" href="https://wa.me/qr/PXBJ2FDZ7EE2L1" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+        <a class="social-button facebook" href="https://www.facebook.com/onsare.wolf" target="_blank" rel="noopener">📘 My Facebook</a>
+        <a class="social-button instagram" href="https://instagram.com/wycliff.onsare" target="_blank" rel="noopener">📸 My Instagram</a>
+        <a class="social-button tiktok" href="https://vm.tiktok.com/ZS9DmUgeyCTkn-rltMA/" target="_blank" rel="noopener">🎵 My TikTok</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 <strong>Wycliff Onsare</strong>. All rights reserved.</p>
+</footer>
+</body>
+</html>
